@@ -22,9 +22,6 @@ roleRef:
   name: role-arc-data-scc
 subjects:
 - apiGroup: rbac.authorization.k8s.io
-  kind: User
-  name: arc-admin
-- apiGroup: rbac.authorization.k8s.io
   kind: Group
   name: system:serviceaccounts
 ---
