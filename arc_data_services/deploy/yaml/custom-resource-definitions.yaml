@@ -37,9 +37,9 @@ spec:
   - name: Ready-Pods
     type: string
     JSONPath: ".status.readyPods"
-  - name: External-Endpoint
+  - name: Primary-Endpoint
     type: string
-    JSONPath: ".status.externalEndpoint"
+    JSONPath: ".status.primaryEndpoint"
   - name: Age
     type: date
     JSONPath: ".metadata.creationTimestamp"
@@ -66,9 +66,9 @@ spec:
   - name: Replicas
     type: string
     JSONPath: ".status.readyReplicas"
-  - name: External-Endpoint
+  - name: Primary-Endpoint
     type: string
-    JSONPath: ".status.externalEndpoint"
+    JSONPath: ".status.primaryEndpoint"
   - name: Age
     type: date
     JSONPath: ".metadata.creationTimestamp"

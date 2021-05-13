@@ -1,9 +1,7 @@
-apiVersion: security.openshift.io/v1
-kind: SecurityContextConstraints
+apiVersion: security.openshift.io/v1
+kind: SecurityContextConstraints
 metadata:
-  annotations:
-    kubernetes.io/description: Azure Arc enabled data services custom scc is based on 'non-root' scc plus additional capabilities.
-  name: arc-data-scc
+  name: arc-data-scc
 allowHostDirVolumePlugin: false
 allowHostIPC: false
 allowHostNetwork: false
@@ -19,6 +17,7 @@ allowedCapabilities:
 defaultAddCapabilities: null
 fsGroup:
   type: RunAsAny
+groups: []
 priority: null
 readOnlyRootFilesystem: false
 requiredDropCapabilities:
@@ -30,6 +29,7 @@ seLinuxContext:
   type: MustRunAs
 supplementalGroups:
   type: RunAsAny
+users: []
 volumes:
 - configMap
 - downwardAPI
@@ -37,3 +37,4 @@ volumes:
 - persistentVolumeClaim
 - projected
 - secret
+---
